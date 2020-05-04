@@ -29,10 +29,11 @@
         <link href="{{ asset('css/daterangepicker.css') }}" rel="stylesheet" type="text/css" />
         <!-- Octicons -->
         <link href="{{ asset('css/octicons.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Openlayers style -->
+        <link href="{{ asset('css/ol.css') }}" rel="stylesheet" type="text/css" />
         <!-- Own style -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
         <!-- Styles - CLOSE -->
-
     </head>
 
     <body>

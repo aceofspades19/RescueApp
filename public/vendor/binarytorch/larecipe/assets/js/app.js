@@ -15478,8 +15478,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./nucleo.css", function() {
-			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./nucleo.css");
+		module.hot.accept("!!../../../../../node_modules/css-loader/map.js!./nucleo.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/map.js!./nucleo.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -28004,8 +28004,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../css-loader/index.js!./docsearch.min.css", function() {
-			var newContent = require("!!../../../css-loader/index.js!./docsearch.min.css");
+		module.hot.accept("!!../../../css-loader/map.js!./docsearch.min.css", function() {
+			var newContent = require("!!../../../css-loader/map.js!./docsearch.min.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

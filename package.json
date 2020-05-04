@@ -16,13 +16,12 @@
     "jquery": "^3.2",
     "laravel-mix": "^4.0.7",
     "lodash": "^4.17.13",
+    "ol": "^6.3.1",
+    "parcel-bundler": "^1.12.4",
     "popper.js": "^1.12",
     "resolve-url-loader": "^2.3.1",
     "sass": "^1.15.2",
     "sass-loader": "^7.1.0",
-    "vue": "^2.5.17",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "vue": "^2.5.17"
   }
 }

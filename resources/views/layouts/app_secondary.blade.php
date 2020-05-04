@@ -61,7 +61,7 @@
     <!-- Bootstrap tooltip -->
     <script src="{{ asset('js/pooper.min.js') }}"></script>
     <!-- Bootstrap 4.1 -->
-    <script src="{{ asset('js/app.js') }}" type="text/js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <!-- Dismiss messages in Bootstrap 4.1 -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- Bootstrap daterangepicker -->

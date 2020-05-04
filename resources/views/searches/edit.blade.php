@@ -573,8 +573,6 @@
 
 @endsection
 
-<!-- JQuery 3.3.1 -->
-<script src="{{ asset('js/jquery-3.3.1.js') }}"></script>
 
 <!-- JS -->
 <script type="text/javascript">

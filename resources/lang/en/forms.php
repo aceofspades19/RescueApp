@@ -87,4 +87,10 @@ return [
     'model_and_brand'                           => 'Make and model',
     'color'                                     => 'Color',
     'license_plate'                             => 'License plate',
+    'geometry_type'                             => 'Geometry Type',
+    'clear'                                     => 'Clear',
+    'save'                                      => 'Save',
+    'point'                                     => 'Point',
+    'linestring'                                => 'Line String',
+    'polygon'                                   => 'Polygon'
 ];

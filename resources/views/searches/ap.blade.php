@@ -73,12 +73,11 @@
             $(".form_invest_" + version).show();
             $(".form" + version).data("ap", version);
             $(".form_embed_" + version).show();
-            $(".form_embed_" + version).find(".embed").val($(".mapembed.version"+version).html().trim());
-            $(".mapembed").hide();
             $(".invest.version_" + version + " p").each(function(index){
                 let rindex = index+1;
                $(".form_invest_" + version + " input.input" + rindex).val($(this).text());
             });
+            $(".maplines").show();
             $(".invest p").hide();
 
         });
@@ -108,7 +107,6 @@
             const text4 = $(".form_invest_" + version).find(".input4").val();
             const text5 = $(".form_invest_" + version).find(".input5").val();
             const text6 = $(".form_invest_" + version).find(".input6").val();
-            const mapembed = $(".form_embed_"+version).find("input.embed").val();
             const text =  $("textarea.input" + version).val();
             const taskid = $(that).data("taskid");
             $(".description" + version).text(text);
@@ -119,7 +117,7 @@
             $(".form_invest_" + version + " input.invest").each(function(index){
                 $(".invest.version_" + version +  " p:eq("+index +")").text($(this).val());
             });
-            $(".mapembed").html(mapembed);
+            $(".maplines").hide();
             common_submit(version);
             $.post("{{route('actionplan.update')}}", {
                 "version": version,
@@ -131,7 +129,6 @@
                 "task4": text4,
                 "task5": text5,
                 "task6": text6,
-                "mapembed":mapembed,
                 "_token": token
             });
         }
@@ -139,11 +136,10 @@
         function common_submit(version)
         {
             $(".description" + version).show();
-            $(".form_embed_" + version).hide();
-            $(".mapembed").show();
             $(".descform").hide();
             $(".invest form").hide();
             $(".invest p").show();
+
 
         }
     });

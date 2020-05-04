@@ -105,14 +105,27 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <div class="mapembed version{{$ap->version}} mapembed">
-                   {!! $ap->mapembed !!}
-               </div>
-                <form class="form_embed_{{$ap->version}} embedform" data-searchid="{{$ap->search_id}}"  data-ap="{{$ap->version}}"  data-taskid="6" style="display:none;">
-                    @csrf
-                    <input class="embed" placeholder="{{ __('main.pastemap') }}" ></input>
+                <script>
+                    var mapdata = mapdata || [];
+                    @if ($ap->mapembed)
+                        mapdata[{{$ap->version}}] = {!! $ap->mapembed !!};
+                    @else
+                        mapdata[{{$ap->version}}] = {};
+                    @endif
+                </script>
+                <div id="map{{$ap->version}}" class="map" style="width:100%;height:400px;"></div>
+                <form class="maplines form-inline" style="display:none;margin-bottom:20px;margin-top:20px;">
+                    <label>{{ __('forms.geometry_type') }}</label>
+                    <select class="type">
+                        <option value="Point">{{ __('forms.point') }}</option>
+                        <option value="LineString">{{ __('forms.linestring') }}</option>
+                        <option value="Polygon">{{ __('forms.polygon') }}</option>
+                    </select>
+                    &nbsp;
+                    <button class="btn btn-default clear">{{ __('forms.clear') }}</button>
+                    &nbsp;
+                    <button class="btn btn-default save">{{ __('forms.save') }}</button>
 
-                    <button type="submit"  class="btn btn-default"><span class="octicon octicon-check"></span></button>
                 </form>
             </div>
         </div>
